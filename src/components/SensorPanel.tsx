@@ -18,17 +18,39 @@ const ESTADOS = {
   riesgo: { texto: 'Riesgo', clase: 'text-[#f07c6a] border-[#f07c6a]/40 bg-[#f07c6a]/10' },
 }
 
+interface Tick {
+  valor: number
+  y: number
+  texto: string
+}
+
 export function SensorPanel({ sensor, onClose }: Props) {
-  const ruta = useMemo(() => {
+  const grafico = useMemo(() => {
     const datos = sensor.historico
-    if (datos.length < 2) return ''
-    const x = scaleLinear().domain([0, datos.length - 1]).range([8, 492])
+    if (datos.length < 2) return { ruta: '', ticks: [] as Tick[] }
+    const x = scaleLinear().domain([0, datos.length - 1]).range([44, 492])
     const min = Math.min(...datos)
     const max = Math.max(...datos)
-    const y = scaleLinear().domain([min, max]).range([104, 12])
-    return line<number>().x((_, i) => x(i)).y((d) => y(d)).curve(curveMonotoneX)(datos) ?? ''
+    const span = max - min || Math.max(1, Math.abs(max) * 0.1)
+    const y = scaleLinear()
+      .domain([min - span * 0.08, max + span * 0.08])
+      .range([104, 12])
+    const valores = y.ticks(4)
+    const paso = valores.length > 1 ? Math.abs(valores[1] - valores[0]) : 1
+    const decimales = paso < 0.1 ? 2 : paso < 1 ? 1 : 0
+    const ticks: Tick[] = valores.map((valor) => ({
+      valor,
+      y: y(valor),
+      texto: valor.toLocaleString('es-VE', { maximumFractionDigits: decimales }),
+    }))
+    const ruta = line<number>()
+      .x((_, i) => x(i))
+      .y((d) => y(d))
+      .curve(curveMonotoneX)(datos) ?? ''
+    return { ruta, ticks }
   }, [sensor.historico])
 
+  const { ruta, ticks } = grafico
   const estado = ESTADOS[sensor.estado]
   const anioFinal = anioReciente()
   const anioInicial = anioFinal - sensor.historico.length + 1
@@ -71,11 +93,26 @@ export function SensorPanel({ sensor, onClose }: Props) {
           <span>Serie histórica · mismo mes</span>
           <span>{sensor.historico.length} años</span>
         </div>
-        <svg viewBox="0 0 500 120" className="h-24 w-full" role="img" aria-label={`Tendencia histórica de ${sensor.nombre} entre ${anioInicial} y ${anioFinal}`}>
-          <line x1="8" y1="110" x2="492" y2="110" stroke="#ffffff" strokeOpacity="0.1" />
+        <svg viewBox="0 0 500 120" className="h-24 w-full" role="img" aria-label={`Tendencia histórica de ${sensor.nombre} entre ${anioInicial} y ${anioFinal}, con valores en el eje vertical`}>
+          {ticks.map((tick) => (
+            <g key={tick.valor}>
+              <line x1="44" x2="492" y1={tick.y} y2={tick.y} stroke="#ffffff" strokeOpacity="0.07" />
+              <text
+                x="38"
+                y={tick.y}
+                textAnchor="end"
+                dominantBaseline="middle"
+                className="fill-white/45 text-[10px] tabular-nums"
+              >
+                {tick.texto}
+              </text>
+            </g>
+          ))}
+          <line x1="44" y1="12" x2="44" y2="104" stroke="#ffffff" strokeOpacity="0.12" />
+          <line x1="44" y1="104" x2="492" y2="104" stroke="#ffffff" strokeOpacity="0.12" />
           <path d={ruta} fill="none" stroke={sensor.color} strokeWidth="2.5" strokeLinecap="round" />
         </svg>
-        <div className="mt-1 flex justify-between text-[10px] text-white/35">
+        <div className="mt-1 flex justify-between pl-[9%] text-[10px] text-white/35">
           <span>{anioInicial}</span>
           <span>{anioMedio}</span>
           <span>{anioFinal}</span>
