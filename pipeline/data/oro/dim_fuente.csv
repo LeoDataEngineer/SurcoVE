@@ -1,0 +1,5 @@
+id,nombre,detalle,url,tipo,live
+power,NASA POWER,"Agroclimatology: T2M, T2M_MAX, T2M_MIN, PRECTOTCORR, RH2M, ALLSKY_SFC_SW_DWN.",https://power.larc.nasa.gov/,NASA,True
+hargreaves,Hargreaves-Samani,ET₀ estimada con temperatura y radiación extraterrestres aproximadas para 10°N.,https://www.fao.org/docrep/X0490E/x0490e0j.htm,metodología,False
+srtm,SRTM (referencia),"Pendiente aproximada por estado, no producto descargado en esta versión.",https://www.earthdata.nasa.gov/data/instruments/srtm,NASA,False
+soilgrids,ISRIC SoilGrids,"Pendiente de integración para textura, pH y carbono.",https://soilgrids.org/,complemento,False

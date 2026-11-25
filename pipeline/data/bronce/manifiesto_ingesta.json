@@ -1,0 +1,197 @@
+{
+  "generado": "2026-11-25T22:36:24.413660+00:00",
+  "entradas": [
+    {
+      "zona": "amazonas",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-67.64&latitude=5.67&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_amazonas.json",
+      "sha256": "b1ce252962d61c11dabcd3463267b28cd9dbb94ca28515867e136823e44fc3f5",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "anzoategui",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-64.68&latitude=10.07&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_anzoategui.json",
+      "sha256": "2e4dcf826dea3d5abbb8c06cf819c844cc6a8a125a91f894316895097ab81577",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "apure",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-67.93&latitude=7.88&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_apure.json",
+      "sha256": "3fc218605c64ba19a593c5b8f488dce2938b58733ffa9ba49b9459101ac16e18",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "aragua",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-67.61&latitude=10.24&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_aragua.json",
+      "sha256": "afaa44628b955080b4a2b43d44488bf20ba4c87acc20ea261139a5d65d058552",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "barinas",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-70.23&latitude=8.63&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_barinas.json",
+      "sha256": "293c2357980da8b6e2e6c5ec7100253c8e42f588734271d82470a31bba5c4eec",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "bolivar",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-63.55&latitude=8.14&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_bolivar.json",
+      "sha256": "846dc5dbe9a4e8e36e6994df3324e2e298031df6e2476bb1e4c9c1d49c1a9526",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "carabobo",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-67.99&latitude=10.16&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_carabobo.json",
+      "sha256": "ab7d6ebca116f25d738c01a5e574f2381c5ea02fa0bb7f9f52b0875a20c3ddce",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "cojedes",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-68.2&latitude=9.66&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_cojedes.json",
+      "sha256": "4cf3d0af36a8e31844524ef3388ee5406a9254a07ba1fc030bea5b0146768379",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "delta-amacuro",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-62.05&latitude=9.18&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_delta-amacuro.json",
+      "sha256": "29e96bebe7b167027c1d96c44d106315377b28dd595d78f70f4d10b7267c0ddb",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "distrito-capital",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-66.9&latitude=10.48&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_distrito-capital.json",
+      "sha256": "26a14252a3c6ff7c9676f5f83e4dca756fa468a55cf2471656cb12741729b596",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "falcon",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-69.6&latitude=11.41&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_falcon.json",
+      "sha256": "ad5e29fad021b77ec78b8c9d473cf1ca7c8e0971ccd7649bfb078edefe3efae7",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "guarico",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-67.34&latitude=9.92&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_guarico.json",
+      "sha256": "6d2cc5ec80a50121ca51990df1a08b553961b6abf7ef7165eeaaeaa2e7e4bdd3",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "la-guaira",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-66.97&latitude=10.6&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_la-guaira.json",
+      "sha256": "5280d2147dd5d9ecb166dbefaafa0446260e52c660512c87d1251654570f16f7",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "lara",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-69.33&latitude=10.07&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_lara.json",
+      "sha256": "4178412e845ad919cf12c5c6bb84cb7e5916e23db4f8f5182409a4878bf51016",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "merida",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-72.22&latitude=7.77&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_merida.json",
+      "sha256": "47ab56097f52643c2c1365891f4035c1727bf3f3c1b41366cfc5a04040e15009",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "miranda",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-67.04&latitude=10.35&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_miranda.json",
+      "sha256": "904de3abb3fd6fd85fc25668ce39d16daaff841a560dfbf95a875232352c0d1b",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "monagas",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-63.18&latitude=9.75&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_monagas.json",
+      "sha256": "ec319d2f6f77a3e4af8ef9edebb66c810e8a47a06cf76db08d6270348397c75f",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "nueva-esparta",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-63.86&latitude=11.03&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_nueva-esparta.json",
+      "sha256": "ab21840131243cfcb7d279c17fc0b94b39dc56eb749d51a7ba7285e3660c17dd",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "portuguesa",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-69.75&latitude=9.06&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_portuguesa.json",
+      "sha256": "45150231cb5d9c237f6225e0fd7e292a960067daa9c158ce17cc674d81db5e9c",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "sucre",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-64.18&latitude=10.45&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_sucre.json",
+      "sha256": "46821603abcb0a47bddf5e2907bbd61f0eb2c2f15cc54faffa26c64158084661",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "tachira",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-72.13&latitude=7.75&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_tachira.json",
+      "sha256": "bec082b219eba8d91015c42ebceb82395bccf6cb45f183fd1eeb9e3c86f957ac",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "trujillo",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-70.48&latitude=9.37&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_trujillo.json",
+      "sha256": "f2d0b5fde6e793631582d4bd83aab7243db198070c31ed967fb1a7513f5dba64",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "yaracuy",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-68.74&latitude=10.33&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_yaracuy.json",
+      "sha256": "53b57c7810847a37fc677badd6348751d0bef2152caf8ff33cd91ad1319c6c93",
+      "descargado": true,
+      "filas": 9131
+    },
+    {
+      "zona": "zulia",
+      "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M,T2M_MAX,T2M_MIN,PRECTOTCORR,RH2M,ALLSKY_SFC_SW_DWN&community=AG&longitude=-71.64&latitude=10.64&start=20010101&end=20251231&format=JSON",
+      "archivo": "power_zulia.json",
+      "sha256": "1117d6a7d55f29940e2ce656232c17fdd473ad5aa39d3d521adc55e15a0c8c81",
+      "descargado": true,
+      "filas": 9131
+    }
+  ]
+}

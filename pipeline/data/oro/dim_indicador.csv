@@ -1,0 +1,9 @@
+id,nombre,unidad,fuente,resolucion,umbral,descripcion,proxy,confianza
+calor,Días de calor,días/mes,NASA POWER,0.5° diario,> 10 días con máxima ≥ 32 °C,Días por mes con temperatura máxima de 32 °C o más.,False,0.9
+lluvia,Lluvia,mm/mes,NASA POWER,0.5° diario,< 40 mm en meses de siembra,Lluvia total caída en el mes en el estado elegido.,False,0.9
+humedad,Humedad relativa,%,NASA POWER,0.5° diario,< 55 %,Humedad media del aire; orienta la demanda de agua de los cultivos.,False,0.85
+sequia,Demanda de agua,mm/mes,NASA POWER + Hargreaves,0.5° mensual,> 150 mm/mes,Agua que la atmósfera pide al suelo; se estima a partir del clima.,True,0.65
+vigor,Vigor vegetativo,índice 0-100,Proxy local (POWER),0.5° mensual,< 45,"Verdor estimado con la lluvia, la humedad y el calor.",True,0.5
+balance,Balance hídrico,mm/mes,NASA POWER + Hargreaves,0.5° mensual,< -60 mm,Cuánta agua gana o pierde el suelo: lluvia menos demanda de la atmósfera.,True,0.7
+erosion,Riesgo de erosión,índice 0-100,SRTM (referencia) + POWER,referencia por estado,> 55,Riesgo estimado con la pendiente del estado y la lluvia más fuerte del mes.,True,0.55
+heladas,Días de helada,días/mes,NASA POWER,0.5° diario,> 0 días en época de floración,Días por mes con temperatura mínima de 2 °C o menos.,False,0.9

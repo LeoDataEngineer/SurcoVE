@@ -1,0 +1,49 @@
+zona,fecha,tipo,severidad,texto,evidencia,confianza
+amazonas,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 125 mm y balance -113 mm.,lluvia|balance|humedad,0.7
+amazonas,2002-05,siembra,informativa,El mes con mayor vigor estimado histórico es 05/2002.,vigor|lluvia|calor,0.55
+anzoategui,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 62 mm y balance -244 mm.,lluvia|balance|humedad,0.7
+anzoategui,2017-06,siembra,informativa,El mes con mayor vigor estimado histórico es 06/2017.,vigor|lluvia|calor,0.55
+apure,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 88 mm y balance -214 mm.,lluvia|balance|humedad,0.7
+apure,2002-06,siembra,informativa,El mes con mayor vigor estimado histórico es 06/2002.,vigor|lluvia|calor,0.55
+aragua,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 61 mm y balance -259 mm.,lluvia|balance|humedad,0.7
+aragua,2002-08,siembra,informativa,El mes con mayor vigor estimado histórico es 08/2002.,vigor|lluvia|calor,0.55
+barinas,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 77 mm y balance -179 mm.,lluvia|balance|humedad,0.7
+barinas,2010-09,siembra,informativa,El mes con mayor vigor estimado histórico es 09/2010.,vigor|lluvia|calor,0.55
+bolivar,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 85 mm y balance -222 mm.,lluvia|balance|humedad,0.7
+bolivar,2017-07,siembra,informativa,El mes con mayor vigor estimado histórico es 07/2017.,vigor|lluvia|calor,0.55
+carabobo,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 58 mm y balance -258 mm.,lluvia|balance|humedad,0.7
+carabobo,2005-07,siembra,informativa,El mes con mayor vigor estimado histórico es 07/2005.,vigor|lluvia|calor,0.55
+cojedes,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 63 mm y balance -287 mm.,lluvia|balance|humedad,0.7
+cojedes,2002-09,siembra,informativa,El mes con mayor vigor estimado histórico es 09/2002.,vigor|lluvia|calor,0.55
+delta-amacuro,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 109 mm y balance -156 mm.,lluvia|balance|humedad,0.7
+delta-amacuro,2017-06,siembra,informativa,El mes con mayor vigor estimado histórico es 06/2017.,vigor|lluvia|calor,0.55
+distrito-capital,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 133 mm y balance -99 mm.,lluvia|balance|humedad,0.7
+distrito-capital,2016-12,siembra,informativa,El mes con mayor vigor estimado histórico es 12/2016.,vigor|lluvia|calor,0.55
+falcon,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 57 mm y balance -145 mm.,lluvia|balance|humedad,0.7
+falcon,2008-10,siembra,informativa,El mes con mayor vigor estimado histórico es 10/2008.,vigor|lluvia|calor,0.55
+guarico,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 61 mm y balance -259 mm.,lluvia|balance|humedad,0.7
+guarico,2002-08,siembra,informativa,El mes con mayor vigor estimado histórico es 08/2002.,vigor|lluvia|calor,0.55
+la-guaira,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 133 mm y balance -99 mm.,lluvia|balance|humedad,0.7
+la-guaira,2016-12,siembra,informativa,El mes con mayor vigor estimado histórico es 12/2016.,vigor|lluvia|calor,0.55
+lara,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 56 mm y balance -246 mm.,lluvia|balance|humedad,0.7
+lara,2002-09,siembra,informativa,El mes con mayor vigor estimado histórico es 09/2002.,vigor|lluvia|calor,0.55
+merida,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 13 mm y balance -321 mm.,lluvia|balance|humedad,0.7
+merida,2008-11,siembra,informativa,El mes con mayor vigor estimado histórico es 11/2008.,vigor|lluvia|calor,0.55
+miranda,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 133 mm y balance -99 mm.,lluvia|balance|humedad,0.7
+miranda,2016-12,siembra,informativa,El mes con mayor vigor estimado histórico es 12/2016.,vigor|lluvia|calor,0.55
+monagas,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 62 mm y balance -212 mm.,lluvia|balance|humedad,0.7
+monagas,2017-06,siembra,informativa,El mes con mayor vigor estimado histórico es 06/2017.,vigor|lluvia|calor,0.55
+nueva-esparta,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 87 mm y balance -38 mm.,lluvia|balance|humedad,0.7
+nueva-esparta,2016-07,siembra,informativa,El mes con mayor vigor estimado histórico es 07/2016.,vigor|lluvia|calor,0.55
+portuguesa,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 69 mm y balance -177 mm.,lluvia|balance|humedad,0.7
+portuguesa,2002-09,siembra,informativa,El mes con mayor vigor estimado histórico es 09/2002.,vigor|lluvia|calor,0.55
+sucre,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 57 mm y balance -147 mm.,lluvia|balance|humedad,0.7
+sucre,2017-06,siembra,informativa,El mes con mayor vigor estimado histórico es 06/2017.,vigor|lluvia|calor,0.55
+tachira,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 23 mm y balance -213 mm.,lluvia|balance|humedad,0.7
+tachira,2003-09,siembra,informativa,El mes con mayor vigor estimado histórico es 09/2003.,vigor|lluvia|calor,0.55
+trujillo,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 60 mm y balance -262 mm.,lluvia|balance|humedad,0.7
+trujillo,2002-09,siembra,informativa,El mes con mayor vigor estimado histórico es 09/2002.,vigor|lluvia|calor,0.55
+yaracuy,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 62 mm y balance -237 mm.,lluvia|balance|humedad,0.7
+yaracuy,2008-10,siembra,informativa,El mes con mayor vigor estimado histórico es 10/2008.,vigor|lluvia|calor,0.55
+zulia,2025-11,riego,media,Regar en el momento de siembra y vigilar la semana siguiente. Lluvia media 17 mm y balance -296 mm.,lluvia|balance|humedad,0.7
+zulia,2011-11,siembra,informativa,El mes con mayor vigor estimado histórico es 11/2011.,vigor|lluvia|calor,0.55

@@ -1,0 +1,13 @@
+{
+  "name": "SurcoVE · Brújula climática para Venezuela",
+  "short_name": "SurcoVE",
+  "description": "Datos de la NASA para decidir qué sembrar y cuándo en Venezuela.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061225",
+  "theme_color": "#061225",
+  "lang": "es",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

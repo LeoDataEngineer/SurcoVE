@@ -1,0 +1,5 @@
+id,nombre,temp,lluvia
+actual,Clima observado,0,0
+calor1,+1 °C,1,0
+calor2,+2 °C y 15 % menos lluvia,2,-15
+calor3,+3 °C y 25 % menos lluvia,3,-25

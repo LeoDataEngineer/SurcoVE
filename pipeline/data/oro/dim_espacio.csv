@@ -1,0 +1,25 @@
+id,nombre,capital,estados,lat,lon,altura_m,pendiente_pct,cultivos,descripcion
+amazonas,Amazonas,Puerto Ayacucho,Amazonas,5.67,-67.64,100,3,yuca|platano|arroz|cacao|banano|frijol,Sur tropical húmedo: lluvia abundante y suelos pobres. Conviene cubrir el suelo y usar variedades de selva.
+anzoategui,Anzoátegui,Barcelona,Anzoátegui,10.07,-64.68,60,4,maiz|sorgo|mani|yuca|naranja|frijol,Costa y llanos cálidos con sequía estacional. El sorgo y el maní aprovechan mejor el periodo seco.
+apure,Apure,San Fernando de Apure,Apure,7.88,-67.93,50,2,arroz|maiz|sorgo|soya|algodon|mani,Llanos bajos con verano seco e invierno inundable. El arroz y la soya son la base del calendario.
+aragua,Aragua,Maracay,Aragua,10.24,-67.61,450,12,cana|maiz|tomate|aguacate|cebolla|frijol,Valles y costa con presión fuerte sobre el suelo. La caña y las hortalizas dominan los valles fértiles.
+barinas,Barinas,Barinas,Barinas,8.63,-70.23,100,3,maiz|arroz|sorgo|soya|mani|yuca,"Llanos occidentales con suelos planos y fértiles. Maíz, arroz y soya se alternan según la lluvia."
+bolivar,Bolívar,Ciudad Bolívar,Bolívar,8.14,-63.55,60,4,yuca|maiz|arroz|cacao|platano|frijol,"Sur-oriente cálido y húmedo, con suelos ácidos. Yuca, plátano y cacao se llevan bien con esa acidez."
+carabobo,Carabobo,Valencia,Carabobo,10.16,-67.99,500,10,cana|maiz|tomate|aguacate|cebolla|frijol,Valles centrales con climas templados y suelos muy demandados. Caña y hortalizas son la opción tradicional.
+cojedes,Cojedes,San Carlos,Cojedes,9.66,-68.2,100,3,maiz|sorgo|arroz|mani|yuca|frijol,Llanos centrales de transición con sequía clara. Maíz y sorgo se siembran al empezar las lluvias.
+delta-amacuro,Delta Amacuro,Tucupita,Delta Amacuro,9.18,-62.05,10,1,arroz|yuca|platano|cacao|banano|frijol,"Delta húmedo y casi plano, con mucha agua. Arroz y cultivos de raíz se adaptan a los suelos aluviales."
+distrito-capital,Distrito Capital,Caracas,Distrito Capital,10.48,-66.9,900,18,tomate|lechuga|zanahoria|cebolla|aguacate|frijol,Zona urbana de altura con huertas en los cinturones verdes. Hortalizas de ciclo corto son la mejor opción.
+falcon,Falcón,Coro,Falcón,11.41,-69.6,20,4,maiz|sorgo|mani|yuca|naranja|frijol,"Costa seca y cálida con lluvias escasas. Sorgo, maní y yuca resisten mejor la falta de agua."
+guarico,Guárico,San Juan de los Morros,Guárico,9.92,-67.34,450,8,arroz|maiz|sorgo|soya|algodon|mani,Llanos centrales con verano seco y lluvias intensas. Arroz de inundación y soya son los cultivos clave.
+la-guaira,La Guaira,La Guaira,La Guaira,10.6,-66.97,30,22,platano|banano|yuca|aguacate|tomate|frijol,Franja costera estrecha y muy inclinada. Plátano y banano protegen el suelo en las laderas.
+lara,Lara,Barquisimeto,Lara,10.07,-69.33,620,8,maiz|sorgo|frijol|mani|tomate|cebolla,"Zona semiárida de altura media con riego en varios valles. Maíz, frijol y hortalizas son comunes."
+merida,Mérida,Mérida,Mérida,7.77,-72.22,1500,20,cafe|papa|frijol|maiz|quinua|aguacate,Andes de altura con lluvia moderada y riesgo de heladas. Papa y café son los cultivos de ladera.
+miranda,Miranda,Los Teques,Miranda,10.35,-67.04,1200,15,cana|maiz|tomate|aguacate|cebolla|frijol,Cordillera de la Costa y valles templados. Caña en los valles bajos y hortalizas en las alturas.
+monagas,Monagas,Maturín,Monagas,9.75,-63.18,70,3,maiz|arroz|sorgo|soya|palma|frijol,"Oriente cálido con llanos y colinas. Maíz, arroz y palma aceitera son las apuestas principales."
+nueva-esparta,Nueva Esparta,La Asunción,Nueva Esparta,11.03,-63.86,20,6,cebolla|tomate|aji|maiz|yuca|frijol,"Isla árida con riego limitado. Cebolla, tomate y ají son posibles con manejo cuidadoso del agua."
+portuguesa,Portuguesa,Guanare,Portuguesa,9.06,-69.75,100,3,maiz|arroz|sorgo|soya|mani|yuca,"Llanos occidentales muy agrícolas y planos. Maíz, arroz y soya se rotan según la temporada de lluvia."
+sucre,Sucre,Cumaná,Sucre,10.45,-64.18,20,5,maiz|yuca|cacao|platano|naranja|frijol,Costa oriental cálida con lluvias moderadas. Cacao y plátano crecen bien en las zonas húmedas.
+tachira,Táchira,San Cristóbal,Táchira,7.75,-72.13,1200,22,cafe|papa|maiz|frijol|quinua|aguacate,Andes de ladera fuerte y clima templado. Café y papa son los cultivos tradicionales de altura.
+trujillo,Trujillo,Trujillo,Trujillo,9.37,-70.48,400,18,maiz|cafe|frijol|yuca|batata|cebolla,Laderas andinas y valles cálidos con mucha pendiente. Maíz y frijol se combinan con café en altura.
+yaracuy,Yaracuy,San Felipe,Yaracuy,10.33,-68.74,200,10,cana|maiz|tomate|cebolla|pina|frijol,"Valles templados y húmedos con suelos fértiles. Caña, piña y hortalizas son la base agrícola."
+zulia,Zulia,Maracaibo,Zulia,10.64,-71.64,20,2,maiz|frijol|platano|cana|banano|sorgo,"Cálido y seco hacia el norte, más húmedo al sur. Maíz y frijol se adaptan a ambos extremos."
