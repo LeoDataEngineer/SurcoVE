@@ -155,7 +155,7 @@ export function MiParcela({ parcela, onChange, consulta, onConsultaChange }: Pro
         </fieldset>
 
         <p className="mt-4 text-xs text-white/40">
-          Guardado solo en este dispositivo. Puedes cambiarlo aquí en cualquier página.
+          Se usa en las otras páginas mientras la pestaña esté abierta. Al abrir la app de nuevo, empieza sin selección.
         </p>
       </div>
     </details>

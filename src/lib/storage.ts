@@ -4,9 +4,10 @@ const CLAVE = 'surocve:parcela:v1'
 const CAMPO = 'surocve:modo-campo:v1'
 const CLAVE_CONSULTA = 'surocve:consulta:v1'
 
+/** La parcela vive solo mientras dure la pestaña: al abrir de nuevo empieza vacía. */
 export function cargarParcela(): Parcela | null {
   try {
-    const raw = localStorage.getItem(CLAVE)
+    const raw = sessionStorage.getItem(CLAVE)
     return raw ? (JSON.parse(raw) as Parcela) : null
   } catch {
     return null
@@ -15,9 +16,19 @@ export function cargarParcela(): Parcela | null {
 
 export function guardarParcela(parcela: Parcela): void {
   try {
-    localStorage.setItem(CLAVE, JSON.stringify(parcela))
+    sessionStorage.setItem(CLAVE, JSON.stringify(parcela))
   } catch {
     // Almacenamiento no disponible: la app sigue funcionando en memoria.
+  }
+}
+
+/** Elimina selecciones de versiones anteriores que usaban localStorage. */
+export function limpiarSeleccionObsoleta(): void {
+  try {
+    localStorage.removeItem(CLAVE)
+    localStorage.removeItem(CLAVE_CONSULTA)
+  } catch {
+    // Sin acceso a localStorage.
   }
 }
 
@@ -39,7 +50,7 @@ export function guardarModoCampo(activo: boolean): void {
 
 export function cargarConsulta(): Consulta | null {
   try {
-    const raw = localStorage.getItem(CLAVE_CONSULTA)
+    const raw = sessionStorage.getItem(CLAVE_CONSULTA)
     return raw ? (JSON.parse(raw) as Consulta) : null
   } catch {
     return null
@@ -48,7 +59,7 @@ export function cargarConsulta(): Consulta | null {
 
 export function guardarConsulta(consulta: Consulta): void {
   try {
-    localStorage.setItem(CLAVE_CONSULTA, JSON.stringify(consulta))
+    sessionStorage.setItem(CLAVE_CONSULTA, JSON.stringify(consulta))
   } catch {
     // Sin persistencia.
   }

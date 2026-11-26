@@ -38,10 +38,12 @@ No hay CI ni tests automatizados todavía. Si aparecen workflows, documentarlos 
   misma pestaña): `index.html` (brújula), `rueda.html`, `rotaciones.html`,
   `escenarios.html`, `mapa.html`, `asistente.html`, `ficha.html`, `guia.html`.
   No hay página única tipo landing ni pantalla de inicio/onboarding: el selector
-  `MiParcela` es un `<details>` integrado arriba de cada página y persiste en
-  `localStorage` (`src/lib/storage.ts`). Arranca sin preselección: hay que elegir
-  estado, cultivo, mes, año y al menos una prioridad antes de ver análisis; las
-  páginas de mapa y guía siguen disponibles sin esa selección. `src/lib/navegacion.ts` mapea ruta →
+  `MiParcela` es un `<details>` integrado arriba de cada página. La selección se
+  guarda en `sessionStorage` (`src/lib/storage.ts`) para que dure al navegar entre
+  páginas, pero al abrir la app de nuevo empieza vacía; `limpiarSeleccionObsoleta()`
+  borra las selecciones antiguas de `localStorage`. Hay que elegir estado, cultivo,
+  mes, año y al menos una prioridad antes de ver análisis; las páginas de mapa y
+  guía siguen disponibles sin esa selección. `src/lib/navegacion.ts` mapea ruta →
   sección; `src/main.tsx` pasa la sección a `App`. `public/sw.js` precachea las
   8 páginas. La guía explica solo lo que aparece en la interfaz: las 8 señales,
   valor, serie histórica, anomalía/percentil, estados, escenarios y rotaciones.

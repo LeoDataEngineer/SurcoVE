@@ -9,7 +9,7 @@ import {
   ruedaSiembra,
   sensores as calcularSensores,
 } from './lib/scoring'
-import { cargarConsulta, cargarModoCampo, cargarParcela, guardarConsulta, guardarModoCampo, guardarParcela } from './lib/storage'
+import { cargarConsulta, cargarModoCampo, cargarParcela, guardarConsulta, guardarModoCampo, guardarParcela, limpiarSeleccionObsoleta } from './lib/storage'
 import { Header } from './components/Header'
 import { MiParcela } from './components/MiParcela'
 import { Brujula } from './components/Brujula'
@@ -24,6 +24,7 @@ import { Footer } from './components/Footer'
 import { Guia } from './components/Guia'
 
 function porDefecto(): Parcela {
+  limpiarSeleccionObsoleta()
   const guardada = cargarParcela()
   if (
     guardada

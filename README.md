@@ -91,9 +91,10 @@ public/gold.json        export desde CSV, servido con fetch (sin backend)
   interfaz; no muestra siglas internas, linaje ni columnas del pipeline.
 - Cada apartado es una **página HTML independiente** (`index.html`, `rueda.html`,
   ...), con navegación normal en la misma pestaña: `/guia.html`, `/mapa.html`, etc.
-- No hay pantalla de inicio: el selector «Mi parcela» está arriba de cada página
-  y se guarda en este dispositivo. Arranca vacío: hay que elegir estado, cultivo,
-  mes, año y al menos una prioridad antes de ver análisis. El mapa y la guía se
+- No hay pantalla de inicio: el selector «Mi parcela» está arriba de cada página.
+  Arranca vacío: hay que elegir estado, cultivo, mes, año y al menos una prioridad
+  antes de ver análisis. La selección se conserva al navegar entre páginas con
+  `sessionStorage`, pero se borra al abrir la app de nuevo. El mapa y la guía se
   pueden consultar sin esa selección. El modo campo funciona offline en las 8 páginas.
 - El selector permite elegir mes y año. Para un año sin dato observado (por ejemplo
   enero de 2026), `baseMes()` promedia ese mes de 2001–2025 y aplica el escenario;
