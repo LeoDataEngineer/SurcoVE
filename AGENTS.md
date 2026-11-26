@@ -43,8 +43,9 @@ No hay CI ni tests automatizados todavía. Si aparecen workflows, documentarlos 
   páginas, pero al abrir la app de nuevo empieza vacía; `limpiarSeleccionObsoleta()`
   borra las selecciones antiguas de `localStorage`. Hay que elegir estado, cultivo,
   mes, año y al menos una prioridad antes de ver análisis; las páginas de mapa y
-  guía siguen disponibles sin esa selección. `src/lib/navegacion.ts` mapea ruta →
-  sección; `src/main.tsx` pasa la sección a `App`. `public/sw.js` precachea las
+  guía siguen disponibles sin esa selección. `index.html` lleva un resumen breve
+  entre la navegación y `MiParcela`: para qué sirve la app y qué puedes hacer en ella.
+  `src/lib/navegacion.ts` mapea ruta → sección; `src/main.tsx` pasa la sección a `App`. `public/sw.js` precachea las
   8 páginas. La guía explica solo lo que aparece en la interfaz: las 8 señales,
   valor, serie histórica, anomalía/percentil, estados, escenarios y rotaciones.
   Brújula con 8 "sensores" (evitar llamarlos "medallones" en la interfaz; ese

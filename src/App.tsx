@@ -149,6 +149,20 @@ export default function App({ seccion }: { seccion: Seccion }) {
       />
 
       <main className="mx-auto max-w-7xl px-4 pb-10 pt-10 sm:px-6">
+        {seccion === 'brujula' && (
+          <section className="mb-8 rounded-3xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-hoja">Para qué sirve SurcoVE</p>
+            <h2 className="mt-2 font-display text-2xl font-bold sm:text-3xl">
+              Planifica tu siembra con el clima de tu estado
+            </h2>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/60">
+              Reunimos el clima histórico de los 23 estados y el Distrito Capital para ayudarte a decidir qué
+              sembrar y cuándo. Puedes mirar ocho señales, comparar rotaciones, explorar el mapa y llevarte una
+              ficha para el campo que funciona sin internet.
+            </p>
+          </section>
+        )}
+
         <MiParcela
           parcela={activa}
           onChange={setParcela}
