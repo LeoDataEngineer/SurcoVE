@@ -66,9 +66,9 @@ export function Guia() {
 
       <Tarjeta titulo="Mi parcela">
         <p>
-          Arriba de cada página puedes cambiar el estado (entre los 23 estados y el Distrito Capital), el cultivo
-          y lo que más te importa. Cada estado tiene su propia lista de cultivos. Esa elección se guarda solo en
-          este dispositivo y se usa en todas las secciones.
+          Al abrir la app, «Mi parcela» está vacía. Elige el estado (entre los 23 estados y el Distrito Capital),
+          el cultivo, el mes, el año y al menos una prioridad para poder analizar. Cada estado tiene su propia
+          lista de cultivos. Esa elección se guarda solo en este dispositivo y se usa en todas las secciones.
         </p>
       </Tarjeta>
 

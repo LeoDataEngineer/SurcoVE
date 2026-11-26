@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import type { Consulta, Escenario, IndicadorId, Parcela, PrioridadId } from './types'
+import type { Consulta, Escenario, IndicadorId, Parcela } from './types'
 import { nombreMes } from './lib/format'
 import { anioReciente, aniosDisponibles, cultivos, gold, zonas, nombreZona, nombreCultivo, nombrePrioridad } from './lib/gold'
 import type { Seccion } from './lib/navegacion'
@@ -25,10 +25,28 @@ import { Guia } from './components/Guia'
 
 function porDefecto(): Parcela {
   const guardada = cargarParcela()
-  const zonaValida = guardada && zonas.some((z) => z.id === guardada.zona)
-  const cultivoValido = guardada && cultivos.some((c) => c.id === guardada.cultivo)
-  if (guardada && zonaValida && cultivoValido) return guardada
-  return { zona: zonas[0].id, cultivo: 'maiz', prioridades: ['agua' as PrioridadId] }
+  if (
+    guardada
+    && guardada.zona
+    && guardada.cultivo
+    && Array.isArray(guardada.prioridades)
+    && guardada.prioridades.length > 0
+    && zonas.some((z) => z.id === guardada.zona)
+    && cultivos.some((c) => c.id === guardada.cultivo)
+  ) return guardada
+  return { zona: '', cultivo: '', prioridades: [] }
+}
+
+function consultaInicial(): Consulta {
+  const guardada = cargarConsulta()
+  const anios = [...aniosDisponibles(), anioReciente() + 1]
+  if (
+    guardada
+    && guardada.mes >= 1
+    && guardada.mes <= 12
+    && anios.includes(guardada.anio)
+  ) return guardada
+  return { mes: 0, anio: 0 }
 }
 
 function sensorDelHash(): IndicadorId | null {
@@ -46,34 +64,52 @@ function Titulo({ ojo, titulo, texto }: { ojo: string; titulo: string; texto: st
   )
 }
 
+function AvisoSeleccion({ onAbrir }: { onAbrir: () => void }) {
+  return (
+    <div className="mb-8 rounded-3xl border border-sol/40 bg-sol/10 p-5">
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-sol">Antes de analizar</p>
+      <h2 className="mt-1 font-display text-xl font-bold">Elige los datos de tu parcela</h2>
+      <p className="mt-2 max-w-2xl text-sm leading-relaxed text-white/65">
+        Selecciona el estado, el cultivo, el mes, el año y al menos una prioridad en «Mi parcela».
+        Cuando esté listo, esta página mostrará el análisis.
+      </p>
+      <button
+        onClick={onAbrir}
+        className="mt-4 min-h-[44px] rounded-xl border border-sol/50 bg-sol/20 px-5 text-sm font-semibold text-sol"
+      >
+        Abrir Mi parcela
+      </button>
+    </div>
+  )
+}
+
 export default function App({ seccion }: { seccion: Seccion }) {
   const [parcela, setParcela] = useState<Parcela>(porDefecto)
   const [escenario, setEscenario] = useState<Escenario>({ temp: 0, lluvia: 0 })
   const [sensorActivo, setSensorActivo] = useState<IndicadorId | null>(sensorDelHash)
   const [modoCampo, setModoCampo] = useState(() => cargarModoCampo())
-  const [consulta, setConsulta] = useState<Consulta>(
-    () => cargarConsulta() ?? { mes: new Date().getMonth() + 1, anio: anioReciente() },
-  )
+  const [consulta, setConsulta] = useState<Consulta>(consultaInicial)
   const { mes, anio } = consulta
   const esFuturo = anio > anioReciente()
   const activa = parcela
+  const listo = Boolean(
+    activa.zona && activa.cultivo && activa.prioridades.length > 0 && mes && anio,
+  )
 
-  const sensores = useMemo(
-    () => calcularSensores(activa.zona, mes, escenario, anio),
-    [activa.zona, mes, escenario, anio],
-  )
-  const estrategias = useMemo(
-    () => calcularEstrategias(activa.zona, activa.cultivo, activa.prioridades, escenario, anio),
-    [activa.zona, activa.cultivo, activa.prioridades, escenario, anio],
-  )
-  const rueda = useMemo(
-    () => ruedaSiembra(activa.cultivo, activa.zona, activa.prioridades, escenario, anio),
-    [activa.cultivo, activa.zona, activa.prioridades, escenario, anio],
-  )
-  const mejores = useMemo(
-    () => mejoresMeses(activa.cultivo, activa.zona, activa.prioridades, escenario, anio).slice(0, 3),
-    [activa.cultivo, activa.zona, activa.prioridades, escenario, anio],
-  )
+  const datos = useMemo(() => {
+    if (!listo) return null
+    return {
+      sensores: calcularSensores(activa.zona, mes, escenario, anio),
+      estrategias: calcularEstrategias(activa.zona, activa.cultivo, activa.prioridades, escenario, anio),
+      rueda: ruedaSiembra(activa.cultivo, activa.zona, activa.prioridades, escenario, anio),
+      mejores: mejoresMeses(activa.cultivo, activa.zona, activa.prioridades, escenario, anio).slice(0, 3),
+    }
+  }, [listo, activa.zona, activa.cultivo, activa.prioridades, escenario, mes, anio])
+
+  const sensores = datos?.sensores ?? []
+  const estrategias = datos?.estrategias ?? []
+  const rueda = datos?.rueda ?? []
+  const mejores = datos?.mejores ?? []
   const sensor = sensores.find((s) => s.id === sensorActivo) ?? null
 
   const guardar = (nueva: Parcela) => {
@@ -119,7 +155,11 @@ export default function App({ seccion }: { seccion: Seccion }) {
           onConsultaChange={guardarConsultaActual}
         />
 
-        {seccion === 'brujula' && (
+        {!listo && seccion !== 'mapa' && seccion !== 'guia' && (
+          <AvisoSeleccion onAbrir={abrirParcela} />
+        )}
+
+        {listo && seccion === 'brujula' && (
           <section>
             <Titulo
               ojo="Brújula de decisiones"
@@ -177,7 +217,7 @@ export default function App({ seccion }: { seccion: Seccion }) {
           </section>
         )}
 
-        {seccion === 'rueda' && (
+        {listo && seccion === 'rueda' && (
           <section>
             <Titulo
               ojo="Calendario circular"
@@ -188,7 +228,7 @@ export default function App({ seccion }: { seccion: Seccion }) {
           </section>
         )}
 
-        {seccion === 'rotaciones' && (
+        {listo && seccion === 'rotaciones' && (
           <section>
             <Titulo
               ojo="Tres caminos"
@@ -199,7 +239,7 @@ export default function App({ seccion }: { seccion: Seccion }) {
           </section>
         )}
 
-        {seccion === 'escenarios' && (
+        {listo && seccion === 'escenarios' && (
           <section>
             <Titulo
               ojo="Laboratorio"
@@ -215,13 +255,13 @@ export default function App({ seccion }: { seccion: Seccion }) {
             <Titulo
               ojo="Cobertura nacional"
               titulo="Explora Venezuela por estados"
-              texto="Los 23 estados y el Distrito Capital, con la capital de cada uno como punto de consulta. Toca un punto o busca un estado en la lista."
+              texto="Los 23 estados y el Distrito Capital, con la capital de cada uno como punto de consulta. Toca un punto o busca un estado en la lista: se guarda en Mi parcela. Completa los demás campos para analizar."
             />
             <Explorador zonas={zonas} zonaActiva={activa.zona} onSelect={(id) => guardar({ ...activa, zona: id })} />
           </section>
         )}
 
-        {seccion === 'asistente' && (
+        {listo && seccion === 'asistente' && (
           <section>
             <Titulo
               ojo="La brújula responde"
@@ -232,7 +272,7 @@ export default function App({ seccion }: { seccion: Seccion }) {
           </section>
         )}
 
-        {seccion === 'ficha' && (
+        {listo && seccion === 'ficha' && (
           <section className="max-w-3xl">
             <Titulo
               ojo="Para llevar"
