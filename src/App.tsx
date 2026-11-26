@@ -158,7 +158,15 @@ export default function App({ seccion }: { seccion: Seccion }) {
             <p className="mt-3 max-w-3xl text-sm leading-relaxed text-white/60">
               Reunimos el clima histórico de los 23 estados y el Distrito Capital para ayudarte a decidir qué
               sembrar y cuándo. Puedes mirar ocho señales, comparar rotaciones, explorar el mapa y llevarte una
-              ficha para el campo que funciona sin internet.
+              ficha para el campo que funciona sin internet. El repositorio público del proyecto está en{' '}
+              <a
+                href="https://github.com/LeoDataEngineer/SurcoVE"
+                target="_blank"
+                rel="noreferrer"
+                className="text-hoja underline underline-offset-2"
+              >
+                github.com/LeoDataEngineer/SurcoVE
+              </a>.
             </p>
           </section>
         )}
